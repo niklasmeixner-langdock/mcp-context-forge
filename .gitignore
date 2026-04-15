@@ -369,4 +369,3 @@ tests/jmeter/results/*.jtl
 tests/jmeter/results/*/
 .jmeter/
 .bob
-mcp.db
