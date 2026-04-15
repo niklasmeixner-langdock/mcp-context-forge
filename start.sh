@@ -1,4 +1,2 @@
 #!/bin/sh
-export MCG_HOST="0.0.0.0"
-export MCG_PORT="${PORT:-4444}"
-exec mcpgateway
+exec /app/.venv/bin/python -m uvicorn mcpgateway.main:app --host 0.0.0.0 --port "${PORT:-4444}"
