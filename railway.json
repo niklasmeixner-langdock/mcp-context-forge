@@ -5,8 +5,9 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "mcpgateway",
+    "startCommand": "mcpgateway --host 0.0.0.0 --port ${PORT:-4444}",
     "healthcheckPath": "/health",
+    "healthcheckTimeout": 60,
     "restartPolicyType": "ON_FAILURE"
   }
 }
